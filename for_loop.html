@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <title>Loops</title>
+</head>
+<body>
+    <h3>Welcome Paulo. Here are your available classes</h3>
+    <ul id="classList">
+        
+    </ul>
+
+    <script lang="js">
+        var classes = ["Tech -> 9am - 11am", "Comms -> 1pm - 3pm", "Pop Presentation -> 3:30pm 5pm"]
+        
+        //Displays the list of items we have to attend
+        function onLoadClassList(){
+            var classListUL = document.getElementById("classList");
+            for(var i = 0; i < classes.length; i++){
+                var listItem = document.createElement("li"); // Creates a list item - "li"
+                listItem.textContent = classes[i];//Array accessor - access elements from my list
+                classListUL.appendChild(listItem); // Add the li we have created inside the ul
+                
+            }
+        }
+
+        onLoadClassList(); //This way we call the function
+
+        //1. Use while loop to achieve the same thing
+
+        //2. Use do while loop to achieve the same thing
+
+        //3. Use the for in and for out to achieve the same thing
+   </script>
+</body>
+</html>
